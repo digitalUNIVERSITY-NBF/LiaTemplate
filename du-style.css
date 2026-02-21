@@ -1,0 +1,187 @@
+/* =========================================
+   VARIABLES
+   ========================================= */
+:root {
+  /* DU Custom Colors */
+  --du-color-border: #D3D3D3;
+  --du-color-bg-light: #F3FCFF;
+  --du-color-bg-dark: #1D3A57;
+  --du-color-white: #FFFFFF;
+  --du-color-gray: #a5a5a5;
+
+  /* Existing Lia Colors */
+  --lia-blue: 39, 92, 144;
+  --lia-blue-dark: 3, 81, 112;
+  --lia-blue-darker: 135, 180, 224;
+  
+  /* Swiper Pagination Colors */
+  --swiper-pagination-color: var(--du-color-white) !important;
+  --swiper-pagination-bullet-inactive-color: var(--du-color-gray) !important;
+  
+  /* Layout */
+  --du-border-radius: 8px;
+}
+
+/* =========================================
+   GENERAL STYLING
+   ========================================= */
+h1, h2, h3, h4, h5 {
+  font-family: system-ui, sans-serif !important;
+}
+
+blockquote {
+  border-radius: var(--du-border-radius);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Hide specific Liascript UI elements */
+div.lia-radio-group.lia-settings-theme-colors, 
+lia-settings-editor,
+li.nav__item.lia-support-menu__item.lia-support-menu__item--mode,
+li.nav__item.lia-support-menu__item.lia-support-menu__item--settings > div > hr:nth-child(4),
+.lia-support-menu__item.lia-support-menu__item--share {
+  display: none;
+}
+
+/* =========================================
+   SWIPER
+   ========================================= */
+.mySwiper {
+  padding-bottom: 20px; 
+}
+
+.swiper-slide {
+  margin-bottom: 40px; 
+  border: 1px solid var(--du-color-border);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  background: var(--du-color-bg-light);
+  border-radius: var(--du-border-radius);
+  padding: 20px;
+  box-sizing: border-box;
+  height: auto;
+}
+
+html.lia-variant-dark .swiper-slide {
+  color: var(--du-color-white) !important;
+  background: var(--du-color-bg-dark) !important;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+  width: 30px !important;
+  height: 30px !important;
+  position: relative !important;
+}
+
+.swiper-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(var(--lia-blue));
+  border-radius: var(--du-border-radius);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 3px;
+}
+
+.swiper-controls .swiper-button-prev,
+.swiper-controls .swiper-button-next,
+.swiper-controls .swiper-pagination {
+  position: static !important;
+  margin: 0 !important;
+  width: auto !important;
+  transform: none !important;
+}
+
+.swiper-controls .swiper-button-prev,
+.swiper-controls .swiper-button-next {
+  color: var(--du-color-white) !important;
+}
+
+.swiper-controls .swiper-pagination {
+  display: flex !important;
+  align-items: center;
+}
+
+/* =========================================
+   TABS
+   ========================================= */
+[role="tablist"] {
+  display: flex;
+  gap: 0; 
+  padding-left: 10px; 
+}
+
+[role="tab"] {
+  background: rgb(var(--color-background)) !important;
+  border: 1px solid var(--du-color-border);
+  border-bottom: none;
+  border-radius: var(--du-border-radius) var(--du-border-radius) 0 0; 
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  top: 1px; 
+}
+
+[role="tab"]:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+[role="tab"][aria-selected="true"] {
+  font-weight: 600;
+  border-top: 3px solid rgb(var(--color-highlight)); 
+  z-index: 1; 
+}
+
+[role="tabpanel"] {
+  border: 1px solid var(--du-color-border);
+  padding: 20px;
+  border-radius: var(--du-border-radius);
+}
+
+/* =========================================
+   QUOTES
+   ========================================= */
+.duQuote {
+  color: rgb(var(--lia-blue)) !important;
+}
+
+.duQuote::before,
+.duQuote::after {
+  color: rgb(var(--color-highlight-dark));
+  font-size: 2.5rem;
+}
+
+.duQuote::before {
+  content: "❝";
+  float: left;
+}
+
+.duQuote::after {
+  content: "❝";
+  float: right;
+}
+
+.lia-quote {
+  border: 1px solid var(--du-color-border);
+  background: var(--du-color-bg-light);
+  color: rgb(var(--color-text)) !important;
+}
+
+/* Quote Dark Mode Overrides */
+html.lia-variant-dark .duQuote,
+html.lia-variant-dark .lia-quote {
+  color: var(--du-color-white) !important;
+  background: var(--du-color-bg-dark) !important;
+}
+
+html.lia-variant-dark .duQuote::before,
+html.lia-variant-dark .duQuote::after {
+  color: var(--du-color-white) !important;
+}
