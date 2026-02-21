@@ -46,6 +46,11 @@ li.nav__item.lia-support-menu__item.lia-support-menu__item--settings > div > hr:
   display: none;
 }
 
+.lia-video-wrapper{
+  border-radius: var(--du-border-radius);
+  overflow: hidden; 
+}
+
 /* =========================================
    SWIPER
    ========================================= */
