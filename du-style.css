@@ -33,6 +33,11 @@ blockquote {
   border-radius: var(--du-border-radius);
 }
 
+.lia-quote {
+  border-radius: var(--du-border-radius);
+  background-color: rgb(var(--du-color-bg-light)) !important;
+}
+
 [hidden] {
   display: none !important;
 }
