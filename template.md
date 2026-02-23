@@ -150,32 +150,7 @@ Ein weiterer Text
 
 </div>
 </div>
-
-<script>
-const tabs = document.querySelectorAll('[role="tab"]');
-const panels = document.querySelectorAll('[role="tabpanel"]');
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', (e) => {
-    // 1. Deselect all
-    tabs.forEach(t => {
-      t.setAttribute('aria-selected', false);
-      t.setAttribute('tabindex', '-1');
-    });
-
-    // 2. Hide all panels
-    panels.forEach(p => p.hidden = true);
-
-    // 3. Select clicked tab
-    e.target.setAttribute('aria-selected', true);
-    e.target.setAttribute('tabindex', '0');
-
-    // 4. Show associated panel
-    const id = e.target.getAttribute('aria-controls');
-    document.getElementById(id).hidden = false;
-  });
-});
-</script> 
+@duTabs
 
 # Quote
 
