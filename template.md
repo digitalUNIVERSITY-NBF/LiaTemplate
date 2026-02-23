@@ -1,8 +1,8 @@
 <!--
 
-language:   de
+version:  0.0.1
 
-mode:       Textbook
+comment:    digitalUNIVERSITY template for courses.
 
 link:       https://cdn.jsdelivr.net/gh/digitalUNIVERSITY-NBF/LiaTemplate@6c172624a1db9d2442f9b98e989f28fbac55ed43/du-style.css
 
@@ -11,8 +11,6 @@ link:       https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css
 script:     https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js
 
 script:     https://cdn.jsdelivr.net/npm/tabs@0.2.0/index.min.js
-
-@centerImage: <!-- style="text-align:center;" -->
 
 @onload
 const targetTheme = document.getElementById("lia-theme-color-blue");
@@ -80,6 +78,6 @@ if (!window.duTabsInitialized) {
 </script>
 @end
 
-@duQuote: <!-- class="lia-quote__text duQuote" -->
-
 -->
+
+# Template
