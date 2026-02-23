@@ -4,8 +4,6 @@ version:  0.0.1
 
 comment:    digitalUNIVERSITY template for courses.
 
-link:       https://cdn.jsdelivr.net/gh/digitalUNIVERSITY-NBF/LiaTemplate@6c172624a1db9d2442f9b98e989f28fbac55ed43/du-style.css
-
 link:       https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css
 
 script:     https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js
