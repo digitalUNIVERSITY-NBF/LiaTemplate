@@ -6,8 +6,10 @@
   --du-color-border: #D3D3D3;
   --du-color-bg-light: #F3FCFF;
   --du-color-bg-dark: #1D3A57;
+  --du-color-bg-light-blue: #80cef0;
   --du-color-white: #FFFFFF;
   --du-color-gray: #a5a5a5;
+  --du-color-green: rgba(183, 236, 203, 0.4);
 
   /* Existing Lia Colors */
   --lia-blue: 39, 92, 144;
@@ -34,8 +36,7 @@ blockquote {
 }
 
 .lia-quote {
-  border-radius: var(--du-border-radius);
-  background-color: rgb(var(--du-color-bg-light)) !important;
+  background-color: var(--du-color-green) !important;
 }
 
 [hidden] {
@@ -195,3 +196,4 @@ html.lia-variant-dark .duQuote::before,
 html.lia-variant-dark .duQuote::after {
   color: var(--du-color-white) !important;
 }
+
