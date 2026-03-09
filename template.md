@@ -23,24 +23,35 @@ const targetTheme = document.getElementById("lia-theme-color-blue");
 
 @duSwiper
 <script>
-var swiper = new Swiper(".mySwiper", {
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+document.querySelectorAll(".mySwiper").forEach(function(swiperContainer) {
+  
+  if (swiperContainer.swiper) return;
+
+  const paginationEl = swiperContainer.querySelector(".swiper-pagination");
+
+  const swiperInstance = new Swiper(swiperContainer, {
+    pagination: {
+      el: paginationEl,
+      clickable: true,
+    },
+  });
+
+  const btnNext = swiperContainer.querySelector('.swiper-button-next');
+  const btnPrev = swiperContainer.querySelector('.swiper-button-prev');
+
+  if (btnNext) {
+    btnNext.addEventListener('click', function() {
+      swiperInstance.slideNext();
+    });
+  }
+
+  if (btnPrev) {
+    btnPrev.addEventListener('click', function() {
+      swiperInstance.slidePrev();
+    });
+  }
+
 });
-
-const btnNext = document.querySelector('.swiper-button-next');
-const btnPrev = document.querySelector('.swiper-button-prev');
-
-btnNext.addEventListener('click', function() {
-  swiper.slideNext();
-});
-
-btnPrev.addEventListener('click', function() {
-  swiper.slidePrev();
-});
-
 </script>
 @end
 
