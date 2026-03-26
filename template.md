@@ -81,25 +81,6 @@ if (!window.duTabsInitialized) {
 </script>
 @end
 
-@style
-.simple-sort {
-  width: 100%
-}
-
-.simple-sort-choices-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.simple-sort-choice {
-  padding: 10px;
-  border-radius: 4px;
-  cursor: move;
-  user-select: none;
-}
-@end
-
 @duSimpleSort
 
 <div class="simple-sort"  id="quiz-@0">
