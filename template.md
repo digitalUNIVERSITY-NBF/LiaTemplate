@@ -82,6 +82,10 @@ if (!window.duTabsInitialized) {
 @end
 
 @duSimpleSort
+  @simpleSort(@uid,@0,@1)
+@end
+
+@simpleSort
 
 <div class="simple-sort"  id="quiz-@0">
   <div class="simple-sort-choices-container" >
@@ -226,4 +230,4 @@ persistent: true
 Ordnen Sie die Elemente in umgekehrter Reihenfolge an:
 ---
 
-@duSimpleSort(@uid,1|2|3,3|2|1)
+@duSimpleSort(1|2|3,3|2|1)
