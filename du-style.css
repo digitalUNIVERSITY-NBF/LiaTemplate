@@ -197,3 +197,98 @@ html.lia-variant-dark .duQuote::after {
   color: var(--du-color-white) !important;
 }
 
+/* =========================================
+   FLIPCARD
+   ========================================= */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; 
+  cursor: pointer;
+  margin: 10px;
+  display: inline-block;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.flip-card-inner > span {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card.is-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap; 
+  justify-content: center;
+  align-content: center; 
+  text-align: center; 
+}
+
+.flip-card-front {
+  background-color: #f1f1f1;
+  color: black;
+  transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Container für die Karten */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+/* =========================================
+   SORT
+   ========================================= */
+.simple-sort {
+  width: 100%
+}
+
+.choices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.choice {
+  padding: 10px;
+  border-radius: 4px;
+  cursor: move;
+  user-select: none;
+}

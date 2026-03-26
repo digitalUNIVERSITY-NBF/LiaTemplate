@@ -12,6 +12,8 @@ script:     https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js
 
 script:     https://cdn.jsdelivr.net/npm/tabs@0.2.0/index.min.js
 
+script:   https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js
+
 @onload
 const targetTheme = document.getElementById("lia-theme-color-blue");
     if (targetTheme) {
@@ -77,6 +79,82 @@ if (!window.duTabsInitialized) {
   });
 }
 </script>
+@end
+
+@style
+.simple-sort {
+  width: 100%
+}
+
+.simple-sort-choices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.simple-sort-choice {
+  padding: 10px;
+  border-radius: 4px;
+  cursor: move;
+  user-select: none;
+}
+@end
+
+@duSimpleSort
+
+<div class="simple-sort"  id="quiz-@0">
+  <div class="simple-sort-choices-container" >
+  </div>
+</div>
+
+  <script>
+    (function(){
+      if (window['@0'] == true)
+        return;
+      window['@0'] = true
+      let quizId = '@0';
+      const container = document.querySelector(`#quiz-${quizId}`);
+
+      let choicesContainer = container.querySelector('.simple-sort-choices-container');
+      
+      const correctAnswers = '@2'.split('|');
+      
+      const initialOrder = '@1'.split('|');
+      choicesContainer.innerHTML = initialOrder.map(item => 
+        `<div class="simple-sort-choice lia-code lia-code--inline lia-btn  lia-btn--outline" >${item}</div>`
+      ).join('');
+      var sortable = new Sortable(choicesContainer, {
+        animation: 150,
+        filter: '.filtered',
+        pull: false
+      });
+    })();
+  </script>
+
+<!-- data-solution-button='off' -->
+  [[!]]
+  <script>
+    let quizId = '@0';
+    let container = document.querySelector(`#quiz-${quizId}`);
+
+    const correctAnswers = '@2'.split('|');
+
+    let choicesContainer = container.querySelector('.simple-sort-choices-container');
+    const choices = Array.from(choicesContainer.querySelectorAll('.simple-sort-choice'));
+    const currentOrder = choices.map(choice => choice.textContent.trim());
+    
+    const isCorrect = currentOrder.length === correctAnswers.length && 
+                    currentOrder.every((answer, index) => answer === correctAnswers[index]);
+    
+    if (isCorrect) {
+      for (let choice of choices) {
+        choice.classList.add("filtered")
+        choice.setAttribute("disabled",true)
+      }
+      choicesContainer.setAttribute("disabled",true)
+    } 
+    isCorrect == true
+  </script>
 @end
 
 -->
@@ -158,3 +236,13 @@ Ein weiterer Text
 > Eine erste Zeile.
 > 
 > Eine zweite Zeile.
+
+# Sorter
+<!--
+persistent: true
+-->
+
+Ordnen Sie die Elemente in umgekehrter Reihenfolge an:
+---
+
+@duSimpleSort(@uid,1|2|3,3|2|1)
