@@ -197,3 +197,22 @@ html.lia-variant-dark .duQuote::after {
   color: var(--du-color-white) !important;
 }
 
+/* =========================================
+   SORT
+   ========================================= */
+.simple-sort {
+  width: 100%
+}
+
+.simple-sort-choices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.simple-sort-choice {
+  padding: 10px;
+  border-radius: 4px;
+  cursor: move;
+  user-select: none;
+}
