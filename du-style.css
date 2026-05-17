@@ -90,7 +90,8 @@ li.nav__item.lia-support-menu__item.lia-support-menu__item--settings > div > hr:
 
 .swiper-slide {
   margin-bottom: 40px; 
-  border: 1px solid var(--du-color-border);
+  border: none;
+  box-shadow: var(--du-shadow);
   display: flex;
   flex-direction: column; 
   justify-content: center; 
