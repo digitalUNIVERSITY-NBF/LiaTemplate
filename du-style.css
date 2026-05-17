@@ -22,6 +22,33 @@
   
   /* Layout */
   --du-border-radius: 8px;
+
+  /* Shadow */
+  --radius: 7%;
+  --elevation: 1px;
+  --bevel: 0px;
+  --angle: 213deg;
+  --intensity: 32;
+  --diffusion: 30;
+
+  /*======= Computed Variables =======*/
+  --sin: calc(sin(var(--angle)));
+  --cos: calc(cos(var(--angle)));
+  --x-displacement: calc(-1 * var(--cos) * (var(--elevation) + 1px));
+  --y-displacement: calc(-1 * var(--sin) * (var(--elevation) + 1px));
+  --edge-opacity: calc(var(--intensity) * 0.006 - var(--diffusion) * 0.002);
+  --edge-blur: calc(var(--bevel) * 1.5);
+  --surface-contrast: calc(var(--intensity) * 0.01 - var(--diffusion) * 0.005);
+
+  --du-shadow: 
+  var(--x-displacement) var(--y-displacement) calc(var(--diffusion) * 0.3px + (var(--elevation))) calc(var(--elevation) / 2) rgba(0, 0, 0, calc(var(--intensity) * 0.006)),
+  0px 0px calc(var(--diffusion) * 1.4px) rgba(255, 255, 255, calc(var(--intensity) * 0.004)),
+  inset calc(var(--bevel) * -1) 0 var(--edge-blur) hsla(100, 0%, calc((var(--cos) + 1) * 50%), var(--edge-opacity)),
+  inset 0 var(--bevel) var(--edge-blur) hsla(100, 0%, calc((-1 * var(--sin) + 1) * 50%), var(--edge-opacity)),
+  inset var(--bevel) 0 var(--edge-blur) hsla(100, 0%, calc((-1 * var(--cos) + 1) * 50%), var(--edge-opacity)),
+  inset 0 calc(var(--bevel) * -1) var(--edge-blur) hsla(100, 0%, calc((var(--sin) + 1) * 50%), var(--edge-opacity));
+
+  /*==== Shadows made using xmorphic.dev ====*/
 }
 
 /* =========================================
@@ -51,6 +78,7 @@ li.nav__item.lia-support-menu__item.lia-support-menu__item--settings > div > hr:
 .lia-video-wrapper{
   border-radius: var(--du-border-radius);
   overflow: hidden; 
+  box-shadow: var(--du-shadow);
 }
 
 /* =========================================
@@ -150,13 +178,16 @@ html.lia-variant-dark .swiper-slide {
   border: 1px solid var(--du-color-border);
   padding: 20px;
   border-radius: var(--du-border-radius);
+  box-shadow: var(--du-shadow);
 }
 
 /* =========================================
    QUOTES
    ========================================= */
 .duQuote {
-  color: rgb(var(--lia-blue)) !important;
+  border: none !important;
+  box-shadow: var(--du-shadow) !important;
+  font-family: system-ui, sans-serif !important;
 }
 
 .duQuote::before,
@@ -179,6 +210,8 @@ html.lia-variant-dark .swiper-slide {
   border: 1px solid var(--du-color-border);
   background: var(--du-color-bg-light);
   color: rgb(var(--color-text)) !important;
+  border: none !important;
+  box-shadow: var(--du-shadow) !important;
 }
 
 /* Quote Dark Mode Overrides */
