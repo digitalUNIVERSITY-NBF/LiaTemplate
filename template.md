@@ -161,24 +161,26 @@ if (!window.duTabsInitialized) {
 <div class="swiper-wrapper">
 
 <div class="swiper-slide">
-Effektivität
+Slide 1
 ===
 
-Effektivität beschreibt die Genauigkeit und Vollständigkeit, mit der ein Benutzer seine Ziele erreicht. Im Kontext von Usability bedeutet dies, dass ein Produkt genau das tut, was es soll, und die Bedürfnisse des Nutzers erfüllt. Effektivität ist meist eine binäre Frage: Kann der Nutzer die Aufgabe erledigen oder nicht? Ein Beispiel wäre ein Fahrkartenautomat, der dem Benutzer die Möglichkeit bietet, schnell und korrekt ein Ticket zu kaufen. Die Effektivität wäre hier hoch, wenn der Benutzer ohne Probleme sein Ziel erreicht.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 </div>
 
 <div class="swiper-slide">
-Effizienz
+Slide 2
 ===
 
-Effizienz bezieht sich auf die Ressourcen, die der Benutzer aufwenden muss, um seine Ziele zu erreichen. Diese Ressourcen können Zeit, mentale oder physische Anstrengung, Aufmerksamkeit oder auch Kosten sein. Ein Produkt ist effizient, wenn der Benutzer mit minimalem Aufwand sein Ziel erreichen kann. Zurück zum Beispiel des Fahrkartenautomaten: Wenn das Ticket in wenigen Schritten und ohne große Mühe gekauft werden kann, ist die Effizienz hoch. Ist der Prozess hingegen umständlich oder verwirrend, ist die Effizienz gering, selbst wenn das Ziel erreicht wird.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
 </div>
 
 <div class="swiper-slide">
-Zufriedenheit
+Slide 3
 ===
 
-Zufriedenheit beschreibt, wie komfortabel und angenehm der Benutzer das Produkt oder die Anwendung empfindet. Sie ist subjektiver als Effektivität und Effizienz, bezieht sich aber auf das emotionale Empfinden des Benutzers während der Nutzung. Ein benutzerfreundliches Produkt sorgt dafür, dass der Benutzer gerne damit arbeitet, ohne Frustration oder Stress. Zufriedenheit kann durch verschiedene Faktoren beeinflusst werden, wie z.B. die Ästhetik der Benutzeroberfläche, die Einfachheit der Nutzung oder den allgemeinen Komfort bei der Interaktion.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 </div>
 
 </div>
