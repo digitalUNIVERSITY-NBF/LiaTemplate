@@ -85,11 +85,11 @@ li.nav__item.lia-support-menu__item.lia-support-menu__item--settings > div > hr:
    SWIPER
    ========================================= */
 .mySwiper {
-  padding-bottom: 20px; 
+  padding-bottom: 20px;
 }
 
 .swiper-slide {
-  margin-bottom: 40px; 
+  margin-bottom: 20px; 
   border: none;
   box-shadow: var(--du-shadow);
   display: flex;
@@ -98,8 +98,8 @@ li.nav__item.lia-support-menu__item.lia-support-menu__item--settings > div > hr:
   background: var(--du-color-bg-light);
   border-radius: var(--du-border-radius);
   padding: 20px;
-  box-sizing: border-box;
-  height: auto;
+  box-sizing: border-box !important;
+  height: auto !important;
 }
 
 html.lia-variant-dark .swiper-slide {
