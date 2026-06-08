@@ -153,7 +153,7 @@ if (!window.duTabsInitialized) {
   </script>
 @end
 
-@DuFlipCard
+@duFlipCard
 
 <lia-keep>
   <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
@@ -260,8 +260,8 @@ Ordnen Sie die Elemente in umgekehrter Reihenfolge an:
 
 <div class="cards-container">
 
-@DuFlipCard(```Front 1```,```Back 1```)
-@DuFlipCard(```Front 2```,```Back 2```)
-@DuFlipCard(```Front 3```,```Back 3```)
+@duFlipCard(```Front 1```,```Back 1```)
+@duFlipCard(```Front 2```,```Back 2```)
+@duFlipCard(```Front 3```,```Back 3```)
 
 </div>
