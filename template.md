@@ -153,6 +153,18 @@ if (!window.duTabsInitialized) {
   </script>
 @end
 
+@duFlipCard
+
+<lia-keep>
+  <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">@0</div>
+      <div class="flip-card-back">@1</div>
+    </div>
+  </div>
+</lia-keep>
+
+@end
 -->
 
 # Swiper
@@ -242,3 +254,14 @@ Ordnen Sie die Elemente in umgekehrter Reihenfolge an:
 ---
 
 @duSimpleSort(1|2|3,3|2|1)
+
+# Flipcard
+
+
+<div class="cards-container">
+
+@duFlipCard(```Front 1```,```Back 1```)
+@duFlipCard(```Front 2```,```Back 2```)
+@duFlipCard(```Front 3```,```Back 3```)
+
+</div>
